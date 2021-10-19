@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { db } from '../firebase/config.js';
 import { collection, getDocs } from "firebase/firestore";
 import { ProductsCard } from './ProductsCard.jsx';
-/* import {CardProducts} from "./CardProducts.jsx"
-import { Card } from './Card.jsx'; */
+import './styleMenu.css'
 export function Menu() {
   // Declara una nueva variable de estado, que llamaremos "menu".
   const [demoMenu, setDemoMenu] = useState([]); //useState es un Hook
@@ -44,24 +43,31 @@ export function Menu() {
     return (
 
         <>
-        {console.log(demoMenu)}
-        <div>
-        <button className="btnBreakFast" onClick={() => { setType('breakfast'); } }>Desayuno</button>
-        <button className="btnLuch" onClick={() => { setType('lunch'); } }>Fuerte</button>
-        </div>
+        <section className="containerMenu">
+          {console.log(demoMenu)}
+          
+            <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" className="btn-check" name="btnradio" id="btnradio1" autoComplete="off" defaultChecked />
+                <label className="btn btn-outline-primary" htmlFor="btnradio1"  onClick={() => { setType('breakfast'); } }>Desayuno</label>
+                <input type="radio" className="btn-check" name="btnradio" id="btnradio2" autoComplete="off"/>
+                <label className="btn btn-outline-primary" htmlFor="btnradio2" onClick={() => { setType('lunch'); } }>Almuerzo - Cena</label>
+            </div>
 
-        <section className="containerBox">
-              <section className="cards">
-                {
-                  demoMenu.map((product) => (
-                    <ProductsCard
-                        key={product.id}
-                        product={product}
-                    />
-                  ))
-                }
-              </section>
+            <section className="containerBox">
+                  <section className="container-cards">
+                    <div className="slider">
+                    {
+                      demoMenu.map((product) => (
+                        <ProductsCard
+                            key={product.id}
+                            product={product}
+                        />
+                      ))
+                    }
+                    </div>
+                  </section>
             </section>
+          </section>
         
         </>   
     )
