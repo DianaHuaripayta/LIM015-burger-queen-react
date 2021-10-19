@@ -1,0 +1,13 @@
+.container-cards{
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    border-radius: 5px;
+    position: relative;
+    background: salmon;
+}
+
+.designName{
+    font-size: 15px;
+}

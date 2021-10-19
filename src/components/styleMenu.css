@@ -1,0 +1,34 @@
+.containerMenu{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+/* ----------------------- */
+.containerBox{/* container-main-card */
+    width: 100%;
+    overflow-x: auto;
+}
+.container-cards{
+    background: #EBEBEB;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 2rem;
+    gap: 2rem;
+    border-radius: 5px;
+    position: relative;
+    overflow-x: auto;
+}
+.container-cards::-webkit-scrollbar {
+    height: 8px;
+}
+.container-cards::-webkit-scrollbar-thumb {
+    background: #C4C4C4;
+    border-radius: 30px;
+}
+.slider{
+    display: flex;
+    width: 1000%;
+    height: 100%;
+    transition: all .5s;
+}
