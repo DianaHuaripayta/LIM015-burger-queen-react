@@ -66,6 +66,9 @@ export function Menu() {
                     }
                     </div>
                   </section>
+                  <section>
+                    <h1>prueba con github</h1>
+                  </section>
             </section>
           </section>
         
